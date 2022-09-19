@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apple Pay Demo - Local Env</title>   
+    <!-- Script from local jellyfish-->
+    <script>
+      window.currentEnvironment = "{{currentEnvironment}}";
+    </script>
+    <script type="text/javascript" src="{{url_for('static', filename='jellyfish.js')}}">
+    </script>
+    <script type="module" src="{{url_for('static', filename='entry.js')}}"></script>
+  </head>
+  <body>
+    <div id="root">
+        <header className="App-header">
+            <h1>Demo Partner App - Apple Pay</h1>
+          </header>
+          <main>
+            <div>
+                <p>
+                    This App is a very barebones proof of concept for how a partner might integrate with our Apple Pay iframe.
+                    It is intended to be used to check that the domain issue is resolved and as a demo for WePay's security team.
+                </p>
+                <p>
+                    This app is pointing to local Phoenix running on port 8001 and has wepay.min.js pasted from this branch of Jellyfish: 
+                    UIUX-8077-apple-pay-domain-issue.
+                </p>
+                <p>
+                    To see the Apple Pay button inspect the UI and uncheck "display:none" on the apple-pay-button.
+                </p>
+                <div className="digital-wallets">
+                    <h2>Apple Pay Iframe below</h2>
+                    <div id="apple_pay"></div>
+                </div>
+                <div id="token-container">
+                    <div className="token-container-header">
+                        Results:
+                    </div>
+                    <div id="token"></div>
+                </div>
+            </div>
+          </main>
+    </div>
+   
+  </body>
+</html>
