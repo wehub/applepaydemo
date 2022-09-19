@@ -1,11 +1,20 @@
-/* global WePay */
-
-import jsonFormat from 'json-format';
-import {chained} from './helper'
+// for nested objects, returns nested value, otherwise if object or any keys are undefined, returns undefined
+// keys is an array of string keys
+// currIdx used for recursive calls
+const chained = (obj, keys, currIdx = 0) => {
+    const curVal = obj && obj[keys[currIdx]];
+    if (typeof curVal === "object"){
+        return chained(curVal, keys, currIdx + 1);
+    }
+    if(currIdx === keys.length - 1){
+        return curVal;
+    }
+    return undefined;
+}
 
 const apple_pay_configs = {
     button_configs: {
-        accountId: 'cc13d3f6-19a2-49dd-aec4-24b51ed8990b',
+        accountId: "56221a85-2386-4e26-b470-a10b560fb969",
         cssVariables: {
             '--apple-pay-button-width': '100%',
             '--apple-pay-button-height': '40px',
@@ -71,10 +80,10 @@ const apple_pay_configs = {
         }
     },
     on_success: function (data) {
-        document.getElementById('token').innerHTML = `<pre>${jsonFormat(data)}</pre>`;
+        document.getElementById('token').innerHTML = `<pre>${data}</pre>`;
     },
     on_error: function (error) {
-        document.getElementById('token').innerHTML = `<pre>${jsonFormat(error)}</pre>`;
+        document.getElementById('token').innerHTML = `<pre>${error}</pre>`;
     },
     on_update_payment_data: function (intermediatePaymentData) {
         console.log("on_update_payment_data");
@@ -288,7 +297,6 @@ const getNewPaymentMethodData = (intermediatePaymentData) => {
 };
 
 const createApplePayIframe = () => {
-    console.log("calling createApplePayIframe");
     const apple_pay_container_id = "apple_pay";
     WePay.createApplePayIframe(apple_pay_container_id, apple_pay_configs);
 };
