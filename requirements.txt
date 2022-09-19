@@ -4,7 +4,6 @@ autowrapt==1.0
 avro-python3==1.8.2
 avro-schemas==0.1.373
 backports.zoneinfo==0.2.1
--e git+https://git@bitbucket.devops.wepay-inc.com/scm/api-team/base_syslog.git@a0534b571b2751f7f46aafffada4cf8951f30674#egg=base_syslog
 basictracer==3.2.0
 beautifulsoup4==4.4.0
 certifi==2021.5.30
@@ -89,11 +88,9 @@ tzdata==2021.5
 tzlocal==4.0.2
 urllib3==1.25.11
 validate-email==1.3
--e git+https://git@bitbucket.devops.wepay-inc.com/scm/api-team/validators.git@b283185c7d302d44dfbca455e75f1a5eaf4dc528#egg=validators
 virtualenv==20.16.2
 voluptuous==0.8.8
 webpack-flask===0.0.1-4-ebc53633df
--e git+https://git@bitbucket.devops.wepay-inc.com/scm/api-team/python_sdk.git@ede9182a1090fb12b9f1bc29b2165b4cbbf42a28#egg=wepay
 wepay-logger==3.1.0
 Werkzeug==1.0.0
 wrapt==1.12.1
