@@ -22,8 +22,7 @@ const apple_pay_configs = {
             '--apple-pay-button-padding': '0px 0px',
             '--apple-pay-button-box-sizing': 'border-box',
             'ApplePayButtonType': 'check-out',
-            'ApplePayButtonStyle': 'white-outline',
-            'WebkitLocale': 'fr',
+            'ApplePayButtonStyle': 'white-outline'
         },
         merchantDisplayName: 'WePay',
         paymentRequest: {
@@ -83,6 +82,7 @@ const apple_pay_configs = {
         }
     },
     on_success: function (data) {
+        console.log(data);
         document.getElementById('token').innerHTML = `<pre>${data}</pre>`;
     },
     on_error: function (error) {
