@@ -23,7 +23,7 @@ const apple_pay_configs = {
             '--apple-pay-button-box-sizing': 'border-box',
             '-apple-pay-button-type': 'check-out',
             '-apple-pay-button-style': 'white-outline',
-            '-webkit-locale': 'fr-CA',
+            '-webkit-locale': 'fr',
         },
         merchantDisplayName: 'WePay',
         paymentRequest: {
