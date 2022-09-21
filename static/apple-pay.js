@@ -83,7 +83,7 @@ const apple_pay_configs = {
     },
     on_success: function (data) {
         console.log(data);
-        document.getElementById('token').innerHTML = `<pre>${data}</pre>`;
+        document.getElementById('token').innerHTML = `<pre>${data.applePayToken}</pre>`;
     },
     on_error: function (error) {
         document.getElementById('token').innerHTML = `<pre>${error}</pre>`;
