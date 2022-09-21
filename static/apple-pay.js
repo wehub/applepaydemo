@@ -21,9 +21,9 @@ const apple_pay_configs = {
             '--apple-pay-button-border-radius': '3px',
             '--apple-pay-button-padding': '0px 0px',
             '--apple-pay-button-box-sizing': 'border-box',
-            '-apple-pay-button-type': 'check-out',
-            '-apple-pay-button-style': 'white-outline',
-            '-webkit-locale': 'fr',
+            'ApplePayButtonType': 'check-out',
+            'ApplePayButtonStyle': 'white-outline',
+            'WebkitLocale': 'fr',
         },
         merchantDisplayName: 'WePay',
         paymentRequest: {
