@@ -15,6 +15,10 @@ const chained = (obj, keys, currIdx = 0) => {
 const apple_pay_configs = {
     button_configs: {
         accountId: "56221a85-2386-4e26-b470-a10b560fb969",
+        cssVariables: {
+            'ApplePayButtonType': 'check-out',
+            'ApplePayButtonStyle': 'white-outline'
+        },
         locale: "fr",
         merchantDisplayName: 'WePay',
         paymentRequest: {
