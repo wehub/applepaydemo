@@ -12,6 +12,11 @@ window.addEventListener("load", () => {
             uploadEndpoint: "http://vm.wepay.com",
             iframeEndpoint: "https://localhost:8001",
         },
+        "poc": {
+            endpoint: "https://poc-api-v3.wepay-inc.com",
+            uploadEndpoint: "https://poc-uploads.wepay-inc.com/",
+            iframeEndpoint: "https://poc-iframe.wepay-inc.com/",
+        },
         "tst-pci": {
             endpoint: "https://tst-api-v3.wepay-inc.com",
             uploadEndpoint: "https://tst-uploads.wepay-inc.com/",

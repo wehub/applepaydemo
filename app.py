@@ -9,7 +9,8 @@ def local_demo():
 # TODO - query params for environment - serve a different HTML file
 @app.route("/apple-pay-demo")
 def demo():
-    return {"environment": "poc"}
+        print("env: ", request.args.get("environment"))
+        return render_template('index.html', currentEnvironment=request.args.get("environment"))
 
 @app.route('/.well-known/<path:path>')
 def send_cert(path):
