@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, render_template
+from flask import Flask, send_from_directory, render_template, request
 
 app = Flask(__name__)
 
@@ -6,10 +6,8 @@ app = Flask(__name__)
 def local_demo():
     return render_template('index.html', currentEnvironment="local")
 
-# TODO - query params for environment - serve a different HTML file
 @app.route("/apple-pay-demo")
 def demo():
-        print("env: ", request.args.get("environment"))
         return render_template('index.html', currentEnvironment=request.args.get("environment"))
 
 @app.route('/.well-known/<path:path>')
