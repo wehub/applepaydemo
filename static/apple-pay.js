@@ -27,9 +27,10 @@ const apple_pay_configs = {
             'ApplePayButtonType': 'check-out',
             'ApplePayButtonStyle': 'white-outline',
             'ApplePayButtonLocale': 'fr-CA',
-            'border-radius': '1px'
+            'border-radius': '1px',
+            'padding:': '0px',
+            'height': '60px'
         },
-        locale: "fr",
         merchantDisplayName: 'WePay',
         paymentRequest: {
             countryCode: "US",
