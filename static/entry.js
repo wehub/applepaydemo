@@ -2,6 +2,7 @@ import createApplePayIframe from "./apple-pay.js";
 
 window.addEventListener("load", () => {
     if (typeof WePay !== 'object') {
+        console.log("returning");
         return;
     }
 

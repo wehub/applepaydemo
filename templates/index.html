@@ -4,11 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Apple Pay Demo - Local Env</title>   
-    <!-- Script from local jellyfish-->
     <script>
       window.currentEnvironment = "{{currentEnvironment}}";
-    </script>
-    <!-- <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script> -->
+      </script>
+    <!-- Script from local jellyfish-->
     <script type="text/javascript" src="{{url_for('static', filename='jellyfish.js')}}">
     </script>
     <script type="module" src="{{url_for('static', filename='entry.js')}}"></script>
