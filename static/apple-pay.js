@@ -90,6 +90,9 @@ const apple_pay_configs = {
     on_update_payment_data: function (intermediatePaymentData) {
         console.log("on_update_payment_data");
         return getNewPaymentMethodData(intermediatePaymentData);
+    },
+    on_cancel: function (data) {
+        console.log("on cancel: ", data);
     }
 };
 
