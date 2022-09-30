@@ -16,12 +16,9 @@ const apple_pay_configs = {
     button_configs: {
         accountId: "56221a85-2386-4e26-b470-a10b560fb969",
         cssVariables: {
-            'ApplePayButtonType': 'check-out',
-            'ApplePayButtonStyle': 'white-outline',
-            'borderRadius': '1px',
+            'borderRadius': '5px',
             'padding:': '0px',
         },
-        locale: 'fr',
         merchantDisplayName: 'WePay',
         paymentRequest: {
             countryCode: "US",
