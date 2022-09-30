@@ -12,12 +12,22 @@ const chained = (obj, keys, currIdx = 0) => {
     return undefined;
 }
 
+// cssVariables: {
+//     '--apple-pay-button-width': '100%',
+//     '--apple-pay-button-height': '40px',
+//     '--apple-pay-button-border-radius': '3px',
+//     '--apple-pay-button-padding': '0px 0px',
+//     '--apple-pay-button-box-sizing': 'border-box',
+// },
+
 const apple_pay_configs = {
     button_configs: {
         accountId: "56221a85-2386-4e26-b470-a10b560fb969",
         cssVariables: {
             'ApplePayButtonType': 'check-out',
-            'ApplePayButtonStyle': 'white-outline'
+            'ApplePayButtonStyle': 'white-outline',
+            'ApplePayButtonLocale': 'fr-CA',
+            'border-radius': '1px'
         },
         locale: "fr",
         merchantDisplayName: 'WePay',
