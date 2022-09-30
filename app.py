@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route("/local-apple-pay-demo")
 def local_demo():
-    return render_template('index.html', currentEnvironment="local")
+    jellyfishUri = url_for('static', filename='jellyfish.js')
+    return render_template('index.html', currentEnvironment="local", jellyfishUri=jellyfishUri)
 
 @app.route("/apple-pay-demo")
 def demo():
