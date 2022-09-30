@@ -18,7 +18,10 @@ const apple_pay_configs = {
         cssVariables: {
             'borderRadius': '5px',
             'padding:': '0px',
+            'ApplePayButtonType': 'check-out',
+            'ApplePayButtonStyle': 'white-outline'
         },
+        locale: "fr",
         merchantDisplayName: 'WePay',
         paymentRequest: {
             countryCode: "US",
@@ -81,6 +84,7 @@ const apple_pay_configs = {
         document.getElementById('token').innerHTML = `<pre>${data.applePayToken}</pre>`;
     },
     on_error: function (error) {
+        console.log("partner on_error: ", error);
         document.getElementById('token').innerHTML = `<pre>${error}</pre>`;
     },
     on_update_payment_data: function (intermediatePaymentData) {
