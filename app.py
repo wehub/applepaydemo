@@ -8,7 +8,11 @@ def local_demo():
 
 @app.route("/apple-pay-demo")
 def demo():
-        return render_template('index.html', currentEnvironment=request.args.get("environment"))
+    currentEnvironment = request.args.get("environment")
+    jellyfishUri = url_for('static', filename='jellyfish.js')
+    if currentEnvironment == 'poc':
+        jellyfishUri = url_for('static', filename='jellyfish-poc.js')
+    return render_template('index.html', currentEnvironment=currentEnvironment, jellyfishUri=jellyfishUri)
 
 @app.route('/.well-known/<path:path>')
 def send_cert(path):
