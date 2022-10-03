@@ -45,7 +45,7 @@ window.addEventListener("load", () => {
     WePay.STAGING_UPLOAD_ENDPOINT = environmentMap[currentEnvironment].uploadEndpoint;
     WePay.STAGE_IFRAME_ENDPOINT = environmentMap[currentEnvironment].iframeEndpoint;
 
-    const appId = "429252";
+    const appId = appId;
     const apiVersion = "3.0";
     const error = WePay.configure("stage", appId, apiVersion);
 
