@@ -10,6 +10,8 @@ def local_demo():
 @app.route("/apple-pay-demo")
 def demo():
     currentEnvironment = request.args.get("environment")
+    appId = "429252"
+    accountId = "56221a85-2386-4e26-b470-a10b560fb969"
     jellyfishUri = url_for('static', filename='jellyfish.js')
     if currentEnvironment == 'poc':
         jellyfishUri = url_for('static', filename='jellyfish-poc.js')
