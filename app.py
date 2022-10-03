@@ -21,6 +21,10 @@ def demo():
         jellyfishUri = "https://tst-cdn.wepay-inc.com/wepay.min.js"
         appId = "339596"
         accountId = "5d2300c5-4a6b-4994-8509-96cc0ee992c7"
+    elif currentEnvironment == "devtest":
+        jellyfishUri = "https://devtest-cdn.devops.wepay-inc.com/wepay.min.js"
+        appId = "175756"
+        accountId = "e4d356c1-f910-443c-bfeb-743bed1f0046"
     elif currentEnvironment == "stg":
         jellyfishUri = "https://stage-cdn.wepay.com/wepay.min.js"
         appId = "690691"
