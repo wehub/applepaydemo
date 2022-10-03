@@ -18,12 +18,12 @@ window.addEventListener("load", () => {
             uploadEndpoint: "https://poc-uploads.wepay-inc.com/",
             iframeEndpoint: "https://poc-iframe.wepay-inc.com/",
         },
-        "tst-pci": {
+        "tst": {
             endpoint: "https://tst-api-v3.wepay-inc.com",
             uploadEndpoint: "https://tst-uploads.wepay-inc.com/",
             iframeEndpoint: "https://tst-iframe.wepay-inc.com/",
         },
-        "devtest-pci": {
+        "devtest": {
             endpoint: "https://devtest-apiv3.devops.wepay-inc.com",
             // TODO: this needs to be updated
             uploadEndpoint: "https://devtest.devops.wepay-inc.com/",
