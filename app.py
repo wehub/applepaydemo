@@ -24,7 +24,7 @@ def demo():
     elif currentEnvironment == "devtest":
         jellyfishUri = "https://devtest-cdn.devops.wepay-inc.com/wepay.min.js"
         appId = "175756"
-        accountId = "e4d356c1-f910-443c-bfeb-743bed1f0046"
+        accountId = "7e454bf1-eeb0-43fe-bc66-80744f0c25d1"
     elif currentEnvironment == "stg":
         jellyfishUri = "https://stage-cdn.wepay.com/wepay.min.js"
         appId = "690691"
