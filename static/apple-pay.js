@@ -18,6 +18,7 @@ const apple_pay_configs = {
         cssVariables: {
             'borderRadius': '5px',
             'padding:': '0px',
+            'color': 'blue',
             'ApplePayButtonType': 'check-out',
             'ApplePayButtonStyle': 'white-outline'
         },
