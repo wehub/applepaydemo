@@ -15,8 +15,8 @@ const chained = (obj, keys, currIdx = 0) => {
 const apple_pay_configs = {
     button_configs: {
         accountId: accountId,
-        cssVariables: {
-        },
+        cssVariables: cssVariables,
+        locale: locale,
         merchantDisplayName: 'WePay',
         paymentRequest: {
             countryCode: "US",

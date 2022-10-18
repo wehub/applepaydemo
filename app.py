@@ -1,4 +1,5 @@
 from flask import Flask, send_from_directory, render_template, request, url_for
+import json
 
 app = Flask(__name__)
 
@@ -41,8 +42,12 @@ def demo():
     appId = defaultAppId if appIdFromQueryParams is None else appIdFromQueryParams
     accountIdFromQueryParams = request.args.get('account_id')
     accountId = defaultAccountId if accountIdFromQueryParams is None else accountIdFromQueryParams
+
+    cssString = request.args.get('css')
+    cssVariables = json.loads(cssString) if cssString is not None else {}
+    locale = request.args.get('locale')
     
-    return render_template('index.html', currentEnvironment=currentEnvironment, jellyfishUri=jellyfishUri, appId=appId, accountId=accountId)
+    return render_template('index.html', currentEnvironment=currentEnvironment, jellyfishUri=jellyfishUri, appId=appId, accountId=accountId, locale=locale, cssVariables=cssVariables)
 
 
 @app.route("/error-demo")

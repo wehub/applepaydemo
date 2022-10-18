@@ -8,6 +8,8 @@
       window.currentEnvironment = "{{currentEnvironment}}";
       window.appId = "{{appId}}"
       window.accountId = "{{accountId}}"
+      window.locale = "{{locale}}"
+      window.cssVariables = JSON.parse('{{ cssVariables | tojson }}');
     </script>
     <script type="text/javascript" src="{{jellyfishUri}}"></script>
 
