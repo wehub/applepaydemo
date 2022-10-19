@@ -52,7 +52,7 @@ def demo():
 
 @app.route("/error-demo")
 def error_demo():
-    return render_template('index.html', currentEnvironment="stg", jellyfishUri="https://stage-cdn.wepay.com/wepay.min.js", appId="849356", accountId="a864da3a-c370-4103-a661-59ddad481fd9")
+    return render_template('index.html', currentEnvironment="stg", jellyfishUri="https://stage-cdn.wepay.com/wepay.min.js", appId="849356", accountId="a864da3a-c370-4103-a661-59ddad481fd9", locale='', cssVariables={})
 
 @app.route('/.well-known/<path:path>')
 def send_cert(path):
