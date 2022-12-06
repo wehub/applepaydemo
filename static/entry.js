@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
             uploadEndpoint: "https://stage-uploads.wepay.com",
             iframeEndpoint: "https://stage-iframe.wepay.com",
         },
-        "prd-pci": {
+        "prod": {
             endpoint: "https://api.wepay.com",
             uploadEndpoint: "https://uploads.wepay.com",
             iframeEndpoint: "https://iframe.wepay.com",
